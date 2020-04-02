@@ -1,13 +1,11 @@
 import 'package:buddy_up/authentication/signUp.dart';
 import 'package:flutter/material.dart';
 import 'package:parse_server_sdk/parse_server_sdk.dart';
-import 'package:buddy_up/buddyBoard.dart';
+import 'package:buddy_up/home.dart';
 
 //Controllers
 final usernameController = TextEditingController();
 final passController = TextEditingController();
-
-ParseUser _parseUser;
 
 class LogInPage extends StatefulWidget {
   @override
@@ -64,8 +62,7 @@ class _LogInPageState extends State<LogInPage> {
             ),
           ],
         ), 
-      ), 
-     
+      ),
     ); 
   }
     //Login
@@ -76,7 +73,7 @@ class _LogInPageState extends State<LogInPage> {
       setState(() {
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => BuddyBoardPage()),
+            MaterialPageRoute(builder: (context) => HomePage()),
           );
       });
     } else {

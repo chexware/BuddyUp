@@ -9,10 +9,20 @@ class _BuddyBoardPageState extends State<BuddyBoardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Log In'),
-      ), 
-      body: Text('Welcome to BuddyUp'),
+      body: Column(
+        children: [
+         RaisedButton(
+              onPressed: () {
+              },
+              child: Text('Find Buddy'),
+          ),
+          RaisedButton(
+              onPressed: () {
+              },
+              child: Text('Offer Help'),
+          ),
+        ],
+      )
     );
   }
  }

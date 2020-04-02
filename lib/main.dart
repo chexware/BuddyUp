@@ -1,12 +1,7 @@
-import 'package:buddy_up/authentication/logIn.dart';
 import 'package:parse_server_sdk/parse_server_sdk.dart';
 import 'package:flutter/material.dart';
-
-
-//Keys from back4app
-const String PARSE_APP_ID = 'AuQmcaFKUtIUi0vtqH2nyqz6wirUPCty12dyTZm0';
-const String PARSE_APP_URL = 'https://parseapi.back4app.com';
-const String MASTER_KEY = '1skgLEVRdxobZ8gxtO8j50Ta4KpLmEYR2iBoP9Fj';
+import 'package:buddy_up/home.dart';
+import 'package:buddy_up/parseServerInfo.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +25,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.lightBlue,
         ),
-        home: LogInPage(),
+        home: HomePage(),
       );
   }
 }

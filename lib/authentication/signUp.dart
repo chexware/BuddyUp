@@ -62,6 +62,9 @@ class _SignUpPageState extends State<SignUpPage> {
     var result = await user.create();
     if (result.success) {
       setState(() {
+        usernameController.clear();
+        emailController.clear();
+        passController.clear();
         Navigator.pop(context);
       });
     } else {
