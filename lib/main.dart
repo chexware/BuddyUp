@@ -11,6 +11,7 @@ void main() async {
     masterKey: MASTER_KEY,
     autoSendSessionId: true,
     debug: true,
+    liveQueryUrl: LIVE_QUERY_URL,
     coreStore: await CoreStoreSharedPrefsImp.getInstance(),
   );
    runApp(MyApp());
