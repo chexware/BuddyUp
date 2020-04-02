@@ -23,18 +23,12 @@ class _LogInPageState extends State<LogInPage> {
         child: Column(
           children: <Widget>[
             TextFormField(
-              validator: (input) {
-                if(input.isEmpty){
-                  return 'Please type a valid email';
-                }
-              },
               controller: usernameController,
               decoration: InputDecoration(
                 labelText: 'Username'
               ), 
             ), 
             TextFormField(
-          
               controller: passController,
               decoration: InputDecoration(
                 labelText: 'Password'
@@ -65,7 +59,7 @@ class _LogInPageState extends State<LogInPage> {
       ),
     ); 
   }
-    //Login
+  //Login
   Future<ParseUser> logIn(username, pass) async {
     var user = ParseUser(username, pass,'');
     var response = await user.login();
