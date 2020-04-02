@@ -11,16 +11,10 @@ class _BuddyBoardPageState extends State<BuddyBoardPage> {
     return Scaffold(
       body: Column(
         children: [
-         RaisedButton(
-              onPressed: () {
-              },
-              child: Text('Find Buddy'),
-          ),
-          RaisedButton(
-              onPressed: () {
-              },
-              child: Text('Offer Help'),
-          ),
+          // TO DO: Return all help requests
+          Text('TO DO : GET ALL HELP REQUESTS'),
+          Text('TO DO : GET ALL HELP REQUESTS'),
+        
         ],
       )
     );

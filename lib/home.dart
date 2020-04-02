@@ -2,6 +2,8 @@ import 'package:parse_server_sdk/parse_server_sdk.dart';
 import 'package:flutter/material.dart';
 import 'package:buddy_up/authentication/logIn.dart';
 import 'package:buddy_up/buddyBoard.dart';
+import 'package:buddy_up/helpRequest.dart';
+
 
 ParseUser _loggedUser;
 
@@ -20,11 +22,34 @@ class _HomePageState extends State<HomePage> {
 
   Widget build(BuildContext context) {
     if (_loggedUser == null ){
-        return LogInPage();
+      return new LogInPage();
     } 
     else 
     {
-        return  BuddyBoardPage();
+      return Scaffold(
+        body: Column(
+          children: [
+          RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HelpRequestPage()),
+                  );
+                },
+                child: Text('Find Buddy'),
+            ),
+            RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => BuddyBoardPage()),
+                  );
+                },
+                child: Text('Offer Help'),
+            ),
+          ],
+        )
+      );
     }
   }
 }
