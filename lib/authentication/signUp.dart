@@ -19,7 +19,7 @@ class _SignUpPageState extends State<SignUpPage> {
       return Scaffold(
       appBar: AppBar(
         title: Text('Sign Up'),
-      ), // AppBar
+      ), 
       body: Form(
        
         child: Column(

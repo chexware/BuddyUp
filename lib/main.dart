@@ -9,9 +9,10 @@ void main() async {
     PARSE_APP_ID,
     PARSE_APP_URL,
     masterKey: MASTER_KEY,
+    clientKey: CLIENT_KEY,
     autoSendSessionId: true,
     debug: true,
-    liveQueryUrl: LIVE_QUERY_URL,
+ //   liveQueryUrl: LIVE_QUERY_URL,
     coreStore: await CoreStoreSharedPrefsImp.getInstance(),
   );
    runApp(MyApp());
