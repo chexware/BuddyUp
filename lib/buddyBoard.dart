@@ -32,6 +32,7 @@ class _BuddyBoardPageState extends State<BuddyBoardPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) =>  ViewRequestPage(request: Request(
+                                snapshot.loadedData.get('objectId'),
                                 snapshot.loadedData.get('title'),
                                 snapshot.loadedData.get('description'),
                                 snapshot.loadedData.get('isCompleted')
